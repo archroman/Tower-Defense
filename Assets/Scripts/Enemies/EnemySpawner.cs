@@ -53,15 +53,28 @@ namespace Enemies
         private void IncreaseMaxEnemyCountBeforeNextWave()
         {
             _maxEnemyCount++;
-            _delayBetweenWaves += _delayIncrease;
+        }
+
+        private void ResetEnemyCount()
+        {
             _enemyCount = 0;
+        }
+
+        private void IncreaseDelayBetweenWaves()
+        {
+            _delayBetweenWaves += _delayIncrease;
         }
 
         private IEnumerator NextWave()
         {
             _isWaitingForNextWave = true;
+
             yield return new WaitForSeconds(_delayBetweenWaves);
+
             IncreaseMaxEnemyCountBeforeNextWave();
+            ResetEnemyCount();
+            IncreaseDelayBetweenWaves();
+
             _isWaitingForNextWave = false;
         }
     }
