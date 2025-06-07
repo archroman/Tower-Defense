@@ -20,7 +20,7 @@ namespace Enemies
 
         private float _spawnTimer;
         private int _enemyCount;
-        private int _currentWave;
+        private int _currentWave = 1;
 
         private bool _isWaitingForNextWave;
 
@@ -33,8 +33,9 @@ namespace Enemies
                 StartCoroutine(NextWave());
             }
 
-            Debug.Log($"Time before wave is {_delayBetweenWaves}");
-        }
+            Debug.Log($"Current delay before next wave: {_delayBetweenWaves}");
+            Debug.Log($"Current wave: {_currentWave}");
+        }   
 
         private void TrySpawnEnemy()
         {
@@ -75,6 +76,7 @@ namespace Enemies
             ResetEnemyCount();
             IncreaseDelayBetweenWaves();
 
+            _currentWave++;
             _isWaitingForNextWave = false;
         }
     }
