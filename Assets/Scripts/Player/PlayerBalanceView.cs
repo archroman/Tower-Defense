@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerBalanceView : MonoBehaviour
+    internal sealed class PlayerBalanceView : MonoBehaviour
     {
         [SerializeField] private TMP_Text _balanceText;
         [SerializeField] private PlayerBalance _playerBalance;

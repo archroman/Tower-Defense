@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerBalance : MonoBehaviour
+    internal sealed class PlayerBalance : MonoBehaviour
     {
         [SerializeField] private int _initialBalance;
 
