@@ -4,9 +4,11 @@ using UnityEngine.Rendering.Universal;
 
 namespace Towers
 {
-    public class Tower : MonoBehaviour
+    public abstract class Tower : MonoBehaviour
     {
         [SerializeField] protected float _damage;
+        [SerializeField] protected float _damageBoost;
+        
         [SerializeField] protected float _attackRange;
         [SerializeField] protected float _attackDelay;
 
@@ -14,6 +16,7 @@ namespace Towers
 
         [SerializeField] protected GameObject _bulletPrefab;
         [SerializeField] protected Transform _firePoint;
+
 
         private float _lastAttackTime;
 
@@ -28,7 +31,7 @@ namespace Towers
             }
         }
 
-        protected virtual void TryAttack()
+        private void TryAttack()
         {
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, _attackRange, _enemyLayer);
 
