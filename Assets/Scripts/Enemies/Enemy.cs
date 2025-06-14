@@ -4,14 +4,12 @@ using UnityEngine;
 
 namespace Enemies
 {
-    internal sealed class Enemy : MonoBehaviour
+    public abstract class Enemy : MonoBehaviour
     {
-        [SerializeField] private float _health;
-        [SerializeField] private int _reward;
+        [SerializeField] protected float _health;
+        [SerializeField] protected int _reward;
 
         private PlayerBalance _playerBalance;
-
-        public event Action OnDeath;
 
         [Obsolete("Obsolete")]
         private void Awake()
@@ -21,7 +19,6 @@ namespace Enemies
 
         private void Die()
         {
-            OnDeath?.Invoke();
             Destroy(gameObject);
             _playerBalance.AddBalance(_reward);
         }

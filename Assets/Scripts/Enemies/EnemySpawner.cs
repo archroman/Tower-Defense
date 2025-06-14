@@ -6,7 +6,7 @@ namespace Enemies
 {
     internal sealed class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private GameObject _enemyPrefab;
+        [SerializeField] private GameObject[] _enemyPrefabs;
 
         [SerializeField] private Transform _spawnPoint;
 
@@ -35,15 +35,18 @@ namespace Enemies
 
             Debug.Log($"Current delay before next wave: {_delayBetweenWaves}");
             Debug.Log($"Current wave: {_currentWave}");
-        }   
+        }
 
         private void TrySpawnEnemy()
         {
             _spawnTimer += Time.deltaTime;
 
+            int randomIndex = Random.Range(0, _enemyPrefabs.Length);
+
             if (_spawnTimer >= _spawnInterval && _enemyCount < _maxEnemyCount)
             {
-                Instantiate(_enemyPrefab, _spawnPoint.position, _spawnPoint.rotation).GetComponent<EnemyMovement>()
+                Instantiate(_enemyPrefabs[randomIndex], _spawnPoint.position, _spawnPoint.rotation)
+                    .GetComponent<EnemyMovement>()
                     .Init(_waypoints);
 
                 _enemyCount++;
