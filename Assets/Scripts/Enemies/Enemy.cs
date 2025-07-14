@@ -9,6 +9,8 @@ namespace Enemies
         [SerializeField] protected float _health;
         [SerializeField] protected int _reward;
 
+        [SerializeField] protected float _damage;
+
         private PlayerBalance _playerBalance;
 
         [Obsolete("Obsolete")]
@@ -30,6 +32,15 @@ namespace Enemies
             if (_health <= 0)
             {
                 Die();
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent<MainTower.MainTower>(out var tower))
+            {
+                tower.TakeDamage(_damage);
+                Destroy(gameObject);
             }
         }
     }

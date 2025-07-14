@@ -139,3 +139,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 50
   _reward: 5
+  _damage: 5
