@@ -57,5 +57,10 @@ namespace Towers
             Bullet bullet = bulletObj.GetComponent<Bullet>();
             bullet.SetTarget(target, _damage);
         }
+
+        public void UpgradeTower(float damageBoost)
+        {
+            _damage += damageBoost;
+        }
     }
 }
