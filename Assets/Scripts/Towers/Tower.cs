@@ -62,5 +62,10 @@ namespace Towers
         {
             _damage += damageBoost;
         }
+
+        public float GetCurrentDamage()
+        {
+            return _damage;
+        }
     }
 }

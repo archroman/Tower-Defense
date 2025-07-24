@@ -88,5 +88,15 @@ namespace Shop
         {
             _towerShopPanel.SetActive(false);
         }
+
+        public int GetFireTowerCost()
+        {
+            return _fireTowerCost;
+        }
+
+        public int GetMagicTowerCost()
+        {
+            return _magicTowerCost;
+        }
     }
 }

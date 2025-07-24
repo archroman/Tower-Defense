@@ -7,13 +7,14 @@ using UnityEngine.UI;
 
 namespace Shop
 {
-    internal sealed class TowerUpgradeController : MonoBehaviour
+    public sealed class TowerUpgradeController : MonoBehaviour
     {
         private const int UpgradeCostIncrease = 10;
 
         [SerializeField] private Tower _tower;
 
         [SerializeField] private GameObject _upgradePanel;
+        [SerializeField] private TowerUpgradeView _upgradeView;
         
         [SerializeField] private Button _closeUpgradePanel;
 
@@ -25,7 +26,8 @@ namespace Shop
         [SerializeField] private PlayerBalance _playerBalance;
         
         [SerializeField] private InputHandler _inputHandler;
-
+        
+        
         private void OnEnable()
         {
             _upgradeButton.onClick.AddListener(UpgradeTower);
@@ -53,6 +55,8 @@ namespace Shop
         private void OnMouseDown()
         {
             _upgradePanel.SetActive(true);
+            _upgradeView.SetTower(_tower);
+            _upgradeView.SetUpgradeController(this);
         }
 
         private void UpgradeTower()
@@ -82,6 +86,11 @@ namespace Shop
         private void CloseUpgradePanel()
         {
             _upgradePanel.SetActive(false);
+        }
+
+        public int GetUpgradeCost()
+        {
+            return _upgradeCost;
         }
     }
 }
