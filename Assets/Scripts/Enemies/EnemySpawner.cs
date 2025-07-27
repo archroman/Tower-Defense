@@ -6,6 +6,8 @@ namespace Enemies
 {
     internal sealed class EnemySpawner : MonoBehaviour
     {
+        private const int MaxDelayBetweenWaves = 40;
+
         [SerializeField] private GameObject[] _enemyPrefabs;
 
         [SerializeField] private Transform _spawnPoint;
@@ -66,7 +68,15 @@ namespace Enemies
 
         private void IncreaseDelayBetweenWaves()
         {
-            _delayBetweenWaves += _delayIncrease;
+            if (_delayBetweenWaves < MaxDelayBetweenWaves)
+            {
+                _delayBetweenWaves += _delayIncrease;
+            }
+
+            if (_delayBetweenWaves > MaxDelayBetweenWaves)
+            {
+                _delayBetweenWaves = MaxDelayBetweenWaves;
+            }
         }
 
         private IEnumerator NextWave()
@@ -81,6 +91,11 @@ namespace Enemies
 
             _currentWave++;
             _isWaitingForNextWave = false;
+        }
+
+        public int GetCurrentWave()
+        {
+            return _currentWave;
         }
     }
 }

@@ -24,9 +24,20 @@ namespace Enemies
 
         private void Move()
         {
-            transform.position = Vector3.MoveTowards(transform.position, _waypoints[_currentWaypointIndex].position,
-                _speed * Time.deltaTime);
+            Vector3 targetPosition = _waypoints[_currentWaypointIndex].position;
+            Vector3 direction = targetPosition - transform.position;
+
+            direction.y = 0;
+
+            if (direction != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5f * Time.deltaTime);
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
         }
+
 
         private void CheckEnemyPosition()
         {
