@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Towers
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class Bullet : MonoBehaviour
+    internal sealed class Bullet : MonoBehaviour
     {
         [SerializeField] private Rigidbody _rigidbody;
         [SerializeField] private float _bulletSpeed;

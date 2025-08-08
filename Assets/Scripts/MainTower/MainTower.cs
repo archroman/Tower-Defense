@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UI;
 
 namespace MainTower
 {
@@ -7,16 +8,15 @@ namespace MainTower
     {
         [SerializeField] private float _towerHealth;
 
-        public static event Action OnTowerDestroyed;
-        
+        [SerializeField] private SceneController _sceneController;
+
         public void TakeDamage(float amount)
         {
             _towerHealth -= amount;
             if (_towerHealth <= 0)
             {
                 Time.timeScale = 0;
-                OnTowerDestroyed?.Invoke();
-                Destroy(gameObject);
+                _sceneController.LoadScene("RestartGameMenu");
             }
         }
 

@@ -6,35 +6,32 @@ namespace UI
     internal sealed class InGameMenu : MonoBehaviour
     {
         [SerializeField] private GameObject _menuPanel;
+        
         [SerializeField] private Button _restartButton;
+        [SerializeField] private Button _mainMenuButton;
 
         [SerializeField] private SceneController _sceneController;
 
         private void OnEnable()
         {
             _restartButton.onClick.AddListener(RestartGame);
-            MainTower.MainTower.OnTowerDestroyed += OpenMenu;
+            _mainMenuButton.onClick.AddListener(OpenMainMenu);
         }
 
         private void OnDisable()
         {
             _restartButton.onClick.RemoveListener(RestartGame);
-            MainTower.MainTower.OnTowerDestroyed -= OpenMenu;
-        }
-
-        private void Awake()
-        {
-            _menuPanel.SetActive(false);
+            _mainMenuButton.onClick.RemoveListener(OpenMainMenu);
         }
 
         private void RestartGame()
         {
-            _sceneController.RestartScene();
+            _sceneController.LoadScene("GameScene");
         }
 
-        private void OpenMenu()
+        private void OpenMainMenu()
         {
-            _menuPanel.SetActive(true);
+            _sceneController.LoadScene("MainMenu");
         }
     }
 }

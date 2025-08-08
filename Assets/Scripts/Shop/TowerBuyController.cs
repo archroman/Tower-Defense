@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Shop
 {
-    public class TowerBuyController : MonoBehaviour
+    internal sealed class TowerBuyController : MonoBehaviour
     {
         [SerializeField] private GameObject _towerShopPanel;
 

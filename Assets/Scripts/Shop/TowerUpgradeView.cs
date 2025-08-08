@@ -16,7 +16,7 @@ namespace Shop
         private void Update()
         {
             _upgradeCostText.text = _upgradeController.GetUpgradeCost().ToString();
-            _currentDamageText.text = $"Current damage: {_tower.GetCurrentDamage():F1}";
+            _currentDamageText.text = _tower.GetCurrentDamage().ToString("F1");
         }
 
         public void SetUpgradeController(TowerUpgradeController controller)

@@ -11,7 +11,7 @@ namespace Enemies
 
         private void Update()
         {
-            _currentWaveText.text = $"Current wave: {_enemySpawner.GetCurrentWave()}";
+            _currentWaveText.text = _enemySpawner.GetCurrentWave().ToString();
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 
 namespace Towers
 {
-    public class MagicTower : Tower
+    internal sealed class MagicTower : Tower
     {
         private void Awake()
         {

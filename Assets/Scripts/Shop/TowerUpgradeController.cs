@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Shop
 {
-    public sealed class TowerUpgradeController : MonoBehaviour
+    internal sealed class TowerUpgradeController : MonoBehaviour
     {
         private const int UpgradeCostIncrease = 10;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Towers
 {
-    public class FireTower : Tower
+    internal sealed class FireTower : Tower
     {
         private void Awake()
         {

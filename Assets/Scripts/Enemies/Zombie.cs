@@ -1,6 +1,6 @@
 namespace Enemies
 {
-    public class Zombie : Enemy
+    internal sealed class Zombie : Enemy
     {
         
     }
