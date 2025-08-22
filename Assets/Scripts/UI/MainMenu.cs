@@ -1,4 +1,4 @@
-using UI.Settings;
+using Settings;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;

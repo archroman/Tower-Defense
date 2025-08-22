@@ -26,6 +26,9 @@ namespace Shop
         [SerializeField] private PlayerBalance _playerBalance;
         
         [SerializeField] private InputHandler _inputHandler;
+        
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _clickSound;
 
         private void OnEnable()
         {
@@ -58,6 +61,7 @@ namespace Shop
         private void OnMouseUpAsButton()
         {
             _towerShopPanel.SetActive(true);
+            _audioSource.PlayOneShot(_clickSound);
         }
 
         private void BuyFireTower()

@@ -26,6 +26,7 @@ namespace UI
 
         private void RestartGame()
         {
+            Time.timeScale = 1;
             _sceneController.LoadScene("GameScene");
         }
 

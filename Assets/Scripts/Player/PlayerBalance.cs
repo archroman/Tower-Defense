@@ -7,6 +7,9 @@ namespace Player
     {
         [SerializeField] private int _initialBalance;
 
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _addCoinsSound;
+        
         private int _balance;
 
         private void Awake()
@@ -16,6 +19,7 @@ namespace Player
 
         public void AddBalance(int amount)
         {
+            _audioSource.PlayOneShot(_addCoinsSound);
             _balance += amount;
         }
 

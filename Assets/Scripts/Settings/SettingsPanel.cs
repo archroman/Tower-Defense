@@ -1,7 +1,7 @@
-using System;
+using UI;
 using UnityEngine;
 
-namespace UI.Settings
+namespace Settings
 {
     internal sealed class SettingsPanel : MonoBehaviour
     {

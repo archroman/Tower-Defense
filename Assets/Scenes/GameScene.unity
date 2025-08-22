@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 12923742}
   - component: {fileID: 12923741}
   - component: {fileID: 12923740}
+  - component: {fileID: 12923744}
   m_Layer: 0
   m_Name: FireTowerUpgradeButtonPos5
   m_TagString: Untagged
@@ -441,12 +442,12 @@ MonoBehaviour:
   _tower: {fileID: 691411416}
   _upgradePanel: {fileID: 1732853815}
   _upgradeView: {fileID: 1732853817}
-  _closeUpgradePanel: {fileID: 848616457}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 492569172}
+  _closeUpgradePanel: {fileID: 848616457}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 12923744}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &12923741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -522,6 +523,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12923738}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &12923744
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12923738}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &12934717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1592,7 @@ GameObject:
   - component: {fileID: 121779560}
   - component: {fileID: 121779559}
   - component: {fileID: 121779558}
+  - component: {fileID: 121779562}
   m_Layer: 0
   m_Name: BuyButtonPos6
   m_TagString: Untagged
@@ -1534,12 +1633,14 @@ MonoBehaviour:
   _closeShopPanel: {fileID: 654120675}
   _fireTower: {fileID: 1255198554}
   _magicTower: {fileID: 1775677569}
-  _fireTowerCost: 5
-  _magicTowerCost: 10
+  _fireTowerCost: 120
+  _magicTowerCost: 150
   _fireTowerUpgradeController: {fileID: 2024078369}
   _magicTowerUpgradeController: {fileID: 494100163}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 121779562}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &121779559
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1615,6 +1716,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121779556}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &121779562
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121779556}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &122151125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,6 +1826,7 @@ GameObject:
   - component: {fileID: 122151129}
   - component: {fileID: 122151128}
   - component: {fileID: 122151127}
+  - component: {fileID: 122151131}
   m_Layer: 0
   m_Name: 'MagicTowerUpgradeButtonPos4 '
   m_TagString: Untagged
@@ -1665,12 +1864,12 @@ MonoBehaviour:
   _tower: {fileID: 1694435440}
   _upgradePanel: {fileID: 1570926983}
   _upgradeView: {fileID: 1570926985}
-  _closeUpgradePanel: {fileID: 273825106}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 1940511792}
+  _closeUpgradePanel: {fileID: 273825106}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 122151131}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &122151128
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1746,6 +1945,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122151125}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &122151131
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122151125}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &128787828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1964,6 +2260,7 @@ GameObject:
   - component: {fileID: 138764110}
   - component: {fileID: 138764109}
   - component: {fileID: 138764108}
+  - component: {fileID: 138764112}
   m_Layer: 0
   m_Name: BuyButtonPos5
   m_TagString: Untagged
@@ -2004,12 +2301,14 @@ MonoBehaviour:
   _closeShopPanel: {fileID: 835734613}
   _fireTower: {fileID: 691411414}
   _magicTower: {fileID: 1932686454}
-  _fireTowerCost: 5
-  _magicTowerCost: 10
+  _fireTowerCost: 120
+  _magicTowerCost: 150
   _fireTowerUpgradeController: {fileID: 12923740}
   _magicTowerUpgradeController: {fileID: 507187499}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 138764112}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &138764109
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2085,6 +2384,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138764106}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &138764112
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138764106}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &141801461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2172,6 +2568,7 @@ GameObject:
   - component: {fileID: 182316449}
   - component: {fileID: 182316448}
   - component: {fileID: 182316447}
+  - component: {fileID: 182316451}
   m_Layer: 0
   m_Name: BuyButtonPos2
   m_TagString: Untagged
@@ -2212,12 +2609,14 @@ MonoBehaviour:
   _closeShopPanel: {fileID: 505231280}
   _fireTower: {fileID: 1973860048}
   _magicTower: {fileID: 1847120474}
-  _fireTowerCost: 5
-  _magicTowerCost: 10
+  _fireTowerCost: 120
+  _magicTowerCost: 150
   _fireTowerUpgradeController: {fileID: 851950615}
   _magicTowerUpgradeController: {fileID: 254271561}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 182316451}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &182316448
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2293,6 +2692,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182316445}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &182316451
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182316445}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &204305848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2699,6 +3195,7 @@ GameObject:
   - component: {fileID: 254271563}
   - component: {fileID: 254271562}
   - component: {fileID: 254271561}
+  - component: {fileID: 254271565}
   m_Layer: 0
   m_Name: MagicTowerUpgradeButtonPos2
   m_TagString: Untagged
@@ -2736,12 +3233,12 @@ MonoBehaviour:
   _tower: {fileID: 1847120476}
   _upgradePanel: {fileID: 684128345}
   _upgradeView: {fileID: 684128347}
-  _closeUpgradePanel: {fileID: 566208551}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 908325779}
+  _closeUpgradePanel: {fileID: 566208551}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 254271565}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &254271562
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2817,6 +3314,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254271559}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &254271565
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254271559}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &256629164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +3530,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 256629166}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &263242368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3251,7 +3857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 278182646}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &280600705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3822,7 +4440,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 368608769}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &397097216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,7 +4572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397097218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4281,7 +4923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 445022469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &445022469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4623,7 +5277,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 492569173}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &492569173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4694,6 +5360,7 @@ GameObject:
   - component: {fileID: 494100165}
   - component: {fileID: 494100164}
   - component: {fileID: 494100163}
+  - component: {fileID: 494100167}
   m_Layer: 0
   m_Name: 'MagicTowerUpgradeButtonPos6 '
   m_TagString: Untagged
@@ -4731,12 +5398,12 @@ MonoBehaviour:
   _tower: {fileID: 1775677576}
   _upgradePanel: {fileID: 1564237136}
   _upgradeView: {fileID: 1564237138}
-  _closeUpgradePanel: {fileID: 2005333204}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 716630956}
+  _closeUpgradePanel: {fileID: 2005333204}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 494100167}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &494100164
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4812,6 +5479,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494100161}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &494100167
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494100161}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &499710231
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,7 +5657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 499710234}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &499710234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5066,6 +5842,7 @@ GameObject:
   - component: {fileID: 505958481}
   - component: {fileID: 505958480}
   - component: {fileID: 505958479}
+  - component: {fileID: 505958483}
   m_Layer: 0
   m_Name: 'MagicTowerUpgradeButtonPos3 '
   m_TagString: Untagged
@@ -5103,12 +5880,12 @@ MonoBehaviour:
   _tower: {fileID: 826618977}
   _upgradePanel: {fileID: 1365300625}
   _upgradeView: {fileID: 1365300627}
-  _closeUpgradePanel: {fileID: 1319448619}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 1553698609}
+  _closeUpgradePanel: {fileID: 1319448619}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 505958483}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &505958480
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5184,6 +5961,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505958477}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &505958483
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505958477}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &507187497
 GameObject:
   m_ObjectHideFlags: 0
@@ -5197,6 +6071,7 @@ GameObject:
   - component: {fileID: 507187501}
   - component: {fileID: 507187500}
   - component: {fileID: 507187499}
+  - component: {fileID: 507187503}
   m_Layer: 0
   m_Name: 'MagicTowerUpgradeButtonPos5 '
   m_TagString: Untagged
@@ -5234,12 +6109,12 @@ MonoBehaviour:
   _tower: {fileID: 1932686456}
   _upgradePanel: {fileID: 1732853815}
   _upgradeView: {fileID: 1732853817}
-  _closeUpgradePanel: {fileID: 848616457}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 492569172}
+  _closeUpgradePanel: {fileID: 848616457}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 507187503}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &507187500
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5315,6 +6190,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507187497}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &507187503
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507187497}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &525665612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5396,7 +6368,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 525665615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &525665615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5669,6 +6653,7 @@ GameObject:
   - component: {fileID: 644170197}
   - component: {fileID: 644170196}
   - component: {fileID: 644170195}
+  - component: {fileID: 644170199}
   m_Layer: 0
   m_Name: BuyButtonPos4
   m_TagString: Untagged
@@ -5709,12 +6694,14 @@ MonoBehaviour:
   _closeShopPanel: {fileID: 113547914}
   _fireTower: {fileID: 675499157}
   _magicTower: {fileID: 1694435438}
-  _fireTowerCost: 5
-  _magicTowerCost: 10
+  _fireTowerCost: 120
+  _magicTowerCost: 150
   _fireTowerUpgradeController: {fileID: 1490853928}
   _magicTowerUpgradeController: {fileID: 122151127}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 644170199}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &644170196
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5790,6 +6777,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644170193}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &644170199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644170193}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &654120674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6360,7 +7444,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 716630957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &716630957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6542,7 +7638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 736853380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &739914361
 GameObject:
   m_ObjectHideFlags: 0
@@ -7251,6 +8359,156 @@ RectTransform:
   m_AnchoredPosition: {x: -8, y: 0}
   m_SizeDelta: {x: 16.599998, y: -3.4000015}
   m_Pivot: {x: 0, y: 1}
+--- !u!1 &839865086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 839865089}
+  - component: {fileID: 839865087}
+  - component: {fileID: 839865088}
+  m_Layer: 5
+  m_Name: UIAudio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &839865087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839865086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb97377bdc324f4495c5377c5e0847b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 839865088}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
+  _successSound: {fileID: 8300000, guid: 10a85f0ab2eec451098bb802748627d5, type: 3}
+  _minInterval: 0.03
+--- !u!82 &839865088
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839865086}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!224 &839865089
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839865086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1189935692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &848616453
 GameObject:
   m_ObjectHideFlags: 0
@@ -7385,6 +8643,7 @@ GameObject:
   - component: {fileID: 851950617}
   - component: {fileID: 851950616}
   - component: {fileID: 851950615}
+  - component: {fileID: 851950619}
   m_Layer: 0
   m_Name: FireTowerUpgradeButtonPos2
   m_TagString: Untagged
@@ -7422,12 +8681,12 @@ MonoBehaviour:
   _tower: {fileID: 1973860050}
   _upgradePanel: {fileID: 684128345}
   _upgradeView: {fileID: 684128347}
-  _closeUpgradePanel: {fileID: 566208551}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 908325779}
+  _closeUpgradePanel: {fileID: 566208551}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 851950619}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &851950616
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7503,6 +8762,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851950613}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &851950619
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851950613}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &853854413
 GameObject:
   m_ObjectHideFlags: 0
@@ -7875,7 +9231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 908325780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &908325780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7966,10 +9334,6 @@ MonoBehaviour:
   - {fileID: 3259912024348624251, guid: f3ee60d7563754aaa9f069170172b14c, type: 3}
   - {fileID: 2855219923825466207, guid: 77cb64404f3ea465f88531c1ef143025, type: 3}
   _spawnPoint: {fileID: 1569786754}
-  _spawnInterval: 1
-  _delayBetweenWaves: 5
-  _delayIncrease: 5
-  _maxEnemyCount: 1
   _waypoints:
   - {fileID: 602090920}
   - {fileID: 1157527337}
@@ -7977,6 +9341,16 @@ MonoBehaviour:
   - {fileID: 117382757}
   - {fileID: 482306233}
   - {fileID: 853854414}
+  _spawnInterval: 1
+  _delayBetweenWaves: 5
+  _delayIncrease: 5
+  _maxEnemyCount: 1
+  _baseHP: 60
+  _hpGrowthPerWave: 1.12
+  _baseReward: 10
+  _rewardGrowthPerWave: 1.09
+  _baseEnemyDamage: 5
+  _enemyDamageStepGrowth: 1.05
 --- !u!4 &916819942
 Transform:
   m_ObjectHideFlags: 0
@@ -8079,6 +9453,7 @@ GameObject:
   - component: {fileID: 928972597}
   - component: {fileID: 928972596}
   - component: {fileID: 928972595}
+  - component: {fileID: 928972599}
   m_Layer: 0
   m_Name: FireTowerUpgradeButtonPos3
   m_TagString: Untagged
@@ -8116,12 +9491,12 @@ MonoBehaviour:
   _tower: {fileID: 1686366478}
   _upgradePanel: {fileID: 1365300625}
   _upgradeView: {fileID: 1365300627}
-  _closeUpgradePanel: {fileID: 1319448619}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 1553698609}
+  _closeUpgradePanel: {fileID: 1319448619}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 928972599}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &928972596
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8197,6 +9572,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928972593}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &928972599
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928972593}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &941610603
 GameObject:
   m_ObjectHideFlags: 0
@@ -8210,6 +9682,7 @@ GameObject:
   - component: {fileID: 941610607}
   - component: {fileID: 941610606}
   - component: {fileID: 941610605}
+  - component: {fileID: 941610609}
   m_Layer: 0
   m_Name: BuyButtonPos3
   m_TagString: Untagged
@@ -8250,12 +9723,14 @@ MonoBehaviour:
   _closeShopPanel: {fileID: 115654343}
   _fireTower: {fileID: 1686366476}
   _magicTower: {fileID: 826618975}
-  _fireTowerCost: 5
-  _magicTowerCost: 10
+  _fireTowerCost: 120
+  _magicTowerCost: 150
   _fireTowerUpgradeController: {fileID: 928972595}
   _magicTowerUpgradeController: {fileID: 505958479}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 941610609}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &941610606
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8331,6 +9806,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941610603}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &941610609
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941610603}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &952891133
 GameObject:
   m_ObjectHideFlags: 0
@@ -9307,6 +10879,7 @@ GameObject:
   - component: {fileID: 1166199335}
   - component: {fileID: 1166199334}
   - component: {fileID: 1166199333}
+  - component: {fileID: 1166199337}
   m_Layer: 0
   m_Name: FireTowerUpgradeButtonPos1
   m_TagString: Untagged
@@ -9344,12 +10917,12 @@ MonoBehaviour:
   _tower: {fileID: 215371221}
   _upgradePanel: {fileID: 971033658}
   _upgradeView: {fileID: 971033662}
-  _closeUpgradePanel: {fileID: 1344206653}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 525665614}
+  _closeUpgradePanel: {fileID: 1344206653}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 1166199337}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &1166199334
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9425,6 +10998,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166199331}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1166199337
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166199331}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1189935691
 GameObject:
   m_ObjectHideFlags: 0
@@ -9468,6 +11138,7 @@ RectTransform:
   - {fileID: 1570926984}
   - {fileID: 1732853816}
   - {fileID: 1564237137}
+  - {fileID: 839865089}
   m_Father: {fileID: 1875438982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10109,6 +11780,10 @@ PrefabInstance:
     - target: {fileID: 2008248501238228724, guid: 0526653259a2e4f228260eaff866230b, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596802442732968176, guid: 0526653259a2e4f228260eaff866230b, type: 3}
+      propertyPath: _damage
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4883845272362302702, guid: 0526653259a2e4f228260eaff866230b, type: 3}
       propertyPath: m_Name
@@ -10956,7 +12631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1347494386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1350338830
 GameObject:
   m_ObjectHideFlags: 0
@@ -11879,7 +13566,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1469297990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1470478941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86ec0b33e76f0e34f9d8e6e11f9d0578, type: 3}
@@ -11972,6 +13671,7 @@ GameObject:
   - component: {fileID: 1490853930}
   - component: {fileID: 1490853929}
   - component: {fileID: 1490853928}
+  - component: {fileID: 1490853932}
   m_Layer: 0
   m_Name: FireTowerUpgradeButtonPos4
   m_TagString: Untagged
@@ -12009,12 +13709,12 @@ MonoBehaviour:
   _tower: {fileID: 675499159}
   _upgradePanel: {fileID: 1570926983}
   _upgradeView: {fileID: 1570926985}
-  _closeUpgradePanel: {fileID: 273825106}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 1940511792}
+  _closeUpgradePanel: {fileID: 273825106}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 1490853932}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &1490853929
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12090,6 +13790,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490853926}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1490853932
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490853926}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1534049018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 86ec0b33e76f0e34f9d8e6e11f9d0578, type: 3}
@@ -12214,7 +14011,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1538244178}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1549761281
 GameObject:
   m_ObjectHideFlags: 0
@@ -12321,7 +14130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1553698610}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1553698610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13998,7 +15819,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753730200}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1775677569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5140419037155726462, guid: 2f0f708a3a07047ddbfae428e30b695b, type: 3}
@@ -14053,7 +15886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a52127575894117a14d72bd40338cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _towerHealth: 100
+  _towerHealth: 1000
   _sceneController: {fileID: 660815148}
 --- !u!23 &1798328903
 MeshRenderer:
@@ -14267,6 +16100,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf16405b9dc45c4b232d7380b581fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1848920992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3430642752545629741, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
+  m_PrefabInstance: {fileID: 3675105813400754743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1848920993
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848920992}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1849485885
 GameObject:
   m_ObjectHideFlags: 0
@@ -14277,6 +16212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849485887}
   - component: {fileID: 1849485888}
+  - component: {fileID: 1849485889}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -14293,7 +16229,7 @@ Transform:
   m_GameObject: {fileID: 1849485885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.341008, y: 29.531685, z: -48.20915}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14311,7 +16247,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc457e175cb49b29596bd95abd351fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialBalance: 100
+  _initialBalance: 300
+  _audioSource: {fileID: 1849485889}
+  _addCoinsSound: {fileID: 8300000, guid: 69b7ce8a5e0df4ab59116c8dde8e66cc, type: 3}
+--- !u!82 &1849485889
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849485885}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1856357402
 GameObject:
   m_ObjectHideFlags: 0
@@ -14461,6 +16496,7 @@ GameObject:
   - component: {fileID: 1857108028}
   - component: {fileID: 1857108027}
   - component: {fileID: 1857108026}
+  - component: {fileID: 1857108030}
   m_Layer: 0
   m_Name: 'MagicTowerUpgradeButtonPos1 '
   m_TagString: Untagged
@@ -14498,12 +16534,12 @@ MonoBehaviour:
   _tower: {fileID: 1987687516}
   _upgradePanel: {fileID: 971033658}
   _upgradeView: {fileID: 971033662}
-  _closeUpgradePanel: {fileID: 1344206653}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 525665614}
+  _closeUpgradePanel: {fileID: 1344206653}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 1857108030}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &1857108027
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14579,6 +16615,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857108024}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &1857108030
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857108024}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1875438981
 GameObject:
   m_ObjectHideFlags: 0
@@ -14937,7 +17070,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920478903}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1931758235
 GameObject:
   m_ObjectHideFlags: 0
@@ -15193,7 +17338,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1940511793}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 839865087}
+        m_TargetAssemblyTypeName: UI.UIButtonSfx, Assembly-CSharp
+        m_MethodName: PlaySuccessSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1940511793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15563,6 +17720,7 @@ GameObject:
   - component: {fileID: 2024078371}
   - component: {fileID: 2024078370}
   - component: {fileID: 2024078369}
+  - component: {fileID: 2024078373}
   m_Layer: 0
   m_Name: FireTowerUpgradeButtonPos6
   m_TagString: Untagged
@@ -15600,12 +17758,12 @@ MonoBehaviour:
   _tower: {fileID: 1255198556}
   _upgradePanel: {fileID: 1564237136}
   _upgradeView: {fileID: 1564237138}
-  _closeUpgradePanel: {fileID: 2005333204}
-  _upgradeCost: 10
-  _damageBoost: 5
   _upgradeButton: {fileID: 716630956}
+  _closeUpgradePanel: {fileID: 2005333204}
   _playerBalance: {fileID: 1849485888}
   _inputHandler: {fileID: 1549761282}
+  _audioSource: {fileID: 2024078373}
+  _clickSound: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
 --- !u!64 &2024078370
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15681,6 +17839,103 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024078367}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &2024078373
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024078367}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5542889929714371677, guid: 5fbcdb6ea00e4456a95ebdc93695055c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2045622623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16293,13 +18548,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 215371219}
     - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
+      propertyPath: _clickSound
+      value: 
+      objectReference: {fileID: 8300000, guid: abb911aa5c5f4449d88e22d34f9fa86a, type: 3}
+    - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
       propertyPath: _magicTower
       value: 
       objectReference: {fileID: 1987687514}
     - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1848920993}
+    - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
       propertyPath: _inputHandler
       value: 
       objectReference: {fileID: 1549761282}
+    - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
+      propertyPath: _fireTowerCost
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
       propertyPath: _playerBalance
       value: 
@@ -16308,6 +18575,10 @@ PrefabInstance:
       propertyPath: _closeShopPanel
       value: 
       objectReference: {fileID: 2124440035}
+    - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
+      propertyPath: _magicTowerCost
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5472910269543655597, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
       propertyPath: _towerShopPanel
       value: 
@@ -16339,7 +18610,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3430642752545629741, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1848920993}
   m_SourcePrefab: {fileID: 100100000, guid: 634b71c10bb7f4894b240a25a62d117d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

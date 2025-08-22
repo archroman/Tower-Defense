@@ -11,6 +11,9 @@ namespace Enemies
 
         [SerializeField] protected float _damage;
 
+        [SerializeField] protected AudioSource _audioSource;
+        [SerializeField] protected AudioClip _hitSound;
+
         private PlayerBalance _playerBalance;
 
         [Obsolete("Obsolete")]
@@ -19,17 +22,29 @@ namespace Enemies
             _playerBalance = FindObjectOfType<PlayerBalance>();
         }
 
+        public void InitStats(float health, int reward, float damage)
+        {
+            _health = health;
+            _reward = reward;
+            _damage = damage;
+        }
+
         private void Die()
         {
+            if (_playerBalance != null)
+                _playerBalance.AddBalance(_reward);
+
             Destroy(gameObject);
-            _playerBalance.AddBalance(_reward);
         }
 
         public void TakeDamage(float damage)
         {
+            if (_audioSource != null && _audioSource.enabled && _hitSound != null)
+                _audioSource.PlayOneShot(_hitSound);
+
             _health -= damage;
 
-            if (_health <= 0)
+            if (_health <= 0f)
             {
                 Die();
             }

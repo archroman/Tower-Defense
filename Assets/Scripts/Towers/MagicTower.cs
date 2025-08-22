@@ -6,7 +6,8 @@ namespace Towers
     {
         private void Awake()
         {
-            _damage += _damageBoost;
+            ConfigureDamage(baseDamage: 20f, damagePerLevel: 10f, startLevel: 0);
+            ConfigureUpgradeCost(baseCost: 110f, multiplier: 1.25f);
         }
     }
 }
