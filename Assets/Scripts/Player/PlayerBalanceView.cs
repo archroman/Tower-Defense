@@ -1,3 +1,4 @@
+using Settings;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ namespace Player
 
         private void Update()
         {
-            _balanceText.text = _playerBalance.GetBalance().ToString();
+            _balanceText.text = NumberFormatter.FormatNumber(_playerBalance.GetBalance());
         }
     }
 }

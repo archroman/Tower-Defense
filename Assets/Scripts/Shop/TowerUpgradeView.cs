@@ -1,4 +1,5 @@
 using System;
+using Settings;
 using UnityEngine;
 using TMPro;
 using Towers;
@@ -15,8 +16,8 @@ namespace Shop
 
         private void Update()
         {
-            _upgradeCostText.text = _upgradeController.GetUpgradeCost().ToString();
-            _currentDamageText.text = _tower.GetCurrentDamage().ToString("F1");
+            _upgradeCostText.text = NumberFormatter.FormatNumber(_upgradeController.GetUpgradeCost());
+            _currentDamageText.text = NumberFormatter.FormatNumber(_tower.GetCurrentDamage(), "0.#");
         }
 
         public void SetUpgradeController(TowerUpgradeController controller)

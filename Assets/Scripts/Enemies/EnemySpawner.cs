@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Enemies
 {
@@ -22,7 +23,7 @@ namespace Enemies
         [SerializeField] private int _maxEnemyCount = 1;
 
         [Header("Enemy Scaling")]
-        [SerializeField] private float _baseHP = 60f;                
+        [SerializeField] private float _baseHp = 60f;                
         [SerializeField] private float _hpGrowthPerWave = 1.12f;      
 
         [SerializeField] private float _baseReward = 10f;            
@@ -61,7 +62,7 @@ namespace Enemies
                 if (movement != null)
                     movement.Init(_waypoints);
 
-                float hp = _baseHP * Mathf.Pow(_hpGrowthPerWave, _currentWave - 1);
+                float hp = _baseHp * Mathf.Pow(_hpGrowthPerWave, _currentWave - 1);
 
                 int reward = Mathf.RoundToInt(_baseReward * Mathf.Pow(_rewardGrowthPerWave, _currentWave - 1));
 
