@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Enemies
 {
     internal sealed class EnemySpawner : MonoBehaviour
     {
-        private const int MaxDelayBetweenWaves = 40;
+        private const int MaxDelayBetweenWaves = 20;
 
         [Header("Prefabs & Path")]
         [SerializeField] private GameObject[] _enemyPrefabs;
@@ -33,6 +32,8 @@ namespace Enemies
         [SerializeField] private float _enemyDamageStepGrowth = 1.05f;
 
         private float _spawnTimer;
+        private float _timeBeforeNextWave;
+        
         private int _enemyCount;
         private int _currentWave = 1;
 
@@ -103,8 +104,13 @@ namespace Enemies
         private IEnumerator NextWave()
         {
             _isWaitingForNextWave = true;
+            _timeBeforeNextWave = _delayBetweenWaves;
 
-            yield return new WaitForSeconds(_delayBetweenWaves);
+            while (_timeBeforeNextWave > 0)
+            {
+                _timeBeforeNextWave -= Time.deltaTime;
+                yield return null;
+            }
 
             IncreaseMaxEnemyCountBeforeNextWave();
             ResetEnemyCount();
@@ -117,6 +123,11 @@ namespace Enemies
         public int GetCurrentWave()
         {
             return _currentWave;
+        }
+
+        public float GetTimeBeforeNextWave()
+        {
+            return Mathf.Max(0, _timeBeforeNextWave);
         }
     }
 }
