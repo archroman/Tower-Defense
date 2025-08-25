@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -10,6 +11,8 @@ namespace Player
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _addCoinsSound;
         
+        public event UnityAction<int> BalanceChanged;
+        
         private int _balance;
 
         private void Awake()
@@ -19,16 +22,18 @@ namespace Player
 
         public void AddBalance(int amount)
         {
-            _audioSource.PlayOneShot(_addCoinsSound);
+            if (amount == 0) return;
             _balance += amount;
+            if (_addCoinsSound && _audioSource) _audioSource.PlayOneShot(_addCoinsSound);
+            BalanceChanged?.Invoke(_balance);
         }
 
-        public void RemoveBalance(int amount)
+        public bool RemoveBalance(int amount)
         {
-            if (_balance >= amount)
-            {
-                _balance -= amount;
-            }
+            if (amount <= 0 || _balance < amount) return false;
+            _balance -= amount;
+            BalanceChanged?.Invoke(_balance);
+            return true;
         }
 
         public int GetBalance()

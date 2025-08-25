@@ -8328,7 +8328,6 @@ GameObject:
   - component: {fileID: 832451865}
   - component: {fileID: 832451868}
   - component: {fileID: 832451867}
-  - component: {fileID: 832451866}
   m_Layer: 5
   m_Name: HealthText
   m_TagString: Untagged
@@ -8355,20 +8354,6 @@ RectTransform:
   m_AnchoredPosition: {x: 35.9, y: -19.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &832451866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832451864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28620efe576f4744bf99af4159dae07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthText: {fileID: 832451867}
-  _mainTower: {fileID: 1798328901}
 --- !u!114 &832451867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11172,7 +11157,6 @@ GameObject:
   - component: {fileID: 1105829565}
   - component: {fileID: 1105829568}
   - component: {fileID: 1105829567}
-  - component: {fileID: 1105829566}
   m_Layer: 5
   m_Name: BalanceText
   m_TagString: Untagged
@@ -11199,20 +11183,6 @@ RectTransform:
   m_AnchoredPosition: {x: 35.513, y: -12.4}
   m_SizeDelta: {x: 47.447, y: 37.471}
   m_Pivot: {x: 0.49999872, y: 0.5000001}
---- !u!114 &1105829566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105829564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8bcae2089c740b8af55154a42ac8442, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _balanceText: {fileID: 1105829567}
-  _playerBalance: {fileID: 1849485888}
 --- !u!114 &1105829567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13765,6 +13735,7 @@ GameObject:
   - component: {fileID: 1350338831}
   - component: {fileID: 1350338833}
   - component: {fileID: 1350338832}
+  - component: {fileID: 1350338834}
   m_Layer: 5
   m_Name: HealthInfo
   m_TagString: Untagged
@@ -13830,6 +13801,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350338830}
   m_CullTransparentMesh: 1
+--- !u!114 &1350338834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350338830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28620efe576f4744bf99af4159dae07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthText: {fileID: 832451867}
+  _mainTower: {fileID: 1798328901}
+  _animationDuration: 0.4
+  _popScale: 1.1
 --- !u!1001 &1353978510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14628,6 +14615,7 @@ GameObject:
   - component: {fileID: 1460146677}
   - component: {fileID: 1460146679}
   - component: {fileID: 1460146678}
+  - component: {fileID: 1460146680}
   m_Layer: 5
   m_Name: BalanceInfo
   m_TagString: Untagged
@@ -14693,6 +14681,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460146676}
   m_CullTransparentMesh: 1
+--- !u!114 &1460146680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460146676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bcae2089c740b8af55154a42ac8442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _balanceText: {fileID: 1105829567}
+  _playerBalance: {fileID: 1849485888}
+  _animationDuration: 0.4
+  _popScale: 1.1
 --- !u!1 &1469297988
 GameObject:
   m_ObjectHideFlags: 0
